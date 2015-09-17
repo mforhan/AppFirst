@@ -1,5 +1,5 @@
 # AppFirst Object Library
-Python library that I use with AppFirst's afapi library to access data as objects and performa common operations. 
+Python library that I use with AppFirst's afapi library to access data as objects and perform common operations. 
 [Note: At this time I load this object file through the python shell, I hope to change it into a pip module soon]
 
 ## Server object
@@ -9,7 +9,7 @@ The server object is instantiated with a Server ID. Once initiated, it collects 
 <pre>
 python -i afobject.py
 api = AppFirstAPI('email','access_token')
-myServer = Server(<ID>)
+myServer = Server(server_id)
 </pre>
 
 ### Data Structure
