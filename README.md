@@ -42,7 +42,7 @@ api = AppFirstAPI('email','api key')
 myServer = Server(server id)
 results = Server.search_process_info('mcafee') - Returns a list of processes with 'mcafee' in the command line argument
 procList = []
-for proc in procs:
+for proc in results:
     procList.append(myServer.processes[proc]['info']['name'])
 count = 1
 name = "Component "
