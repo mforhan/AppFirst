@@ -35,3 +35,21 @@ Method to search process details. Defaults to searchg for string in file handles
 ### General Methods
 *generateRules(list)*
 This method takes a list of process names and converts them into a rule list for passing to afapi.create_process_template
+
+#### Example Template Creation
+<pre>
+api = AppFirstAPI('email','api key')
+myServer = Server(server id)
+results = Server.search_process_info('mcafee') - Returns a list of processes with 'mcafee' in the command line argument
+procList = []
+for proc in procs:
+    procList.append(myServer.processes[proc]['info']['name'])
+count = 1
+name = "Component "
+rules = generateRules(procList)
+for rule in rules:
+    tempRule = []
+    tempRule.append(rule)
+    print (api.create_process_template(name=name+str(count),rules=tempRule))[1]
+    count += 1
+</pre>
